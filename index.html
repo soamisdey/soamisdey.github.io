@@ -1,4 +1,17 @@
 <!DOCTYPE html>
+script>
+
+function mycounter(){
+
+var decrease_increase=0
+var counterdate=new Date()
+var currenthits=counterdate.getTime().toString()
+currenthits=parseInt(currenthits.substring(2,currenthits.length-4))+decrease_increase
+
+document.write("You are visitor # <b>"+currenthits+"</b> to my site!")
+}
+</script>
+
 <html>
 	<head>
 		<title>Soami S Dey</title>
@@ -24,6 +37,9 @@
         		<li><a href="mailto:soamisdey@gmail.com">email</a></li>
         		<li><a href="https://github.com/soamisdey">github.com/soamisdey</a></li>
 			</ul>
+			<script>
+				mycounter()
+			</script>
 		</footer>
 	</body>
 </html>
