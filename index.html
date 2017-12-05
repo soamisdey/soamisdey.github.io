@@ -3,12 +3,15 @@
 
 function mycounter(){
 
-var decrease_increase=0
-var counterdate=new Date()
-var currenthits=counterdate.getTime().toString()
-currenthits=parseInt(currenthits.substring(2,currenthits.length-4))+decrease_increase
-
-document.write("You are visitor # <b>"+currenthits+"</b> to my site!")
+if (localStorage.pagecount)
+ {
+ localStorage.pagecount=Number(localStorage.pagecount) +1;
+ }
+else
+ {
+ localStorage.pagecount=1;
+ }
+document.write("You are visitor # <b>"+localStorage.pagecount+"</b> to my site!")
 }
 </script>
 
